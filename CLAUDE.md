@@ -9,3 +9,8 @@
 - Target platforms: YouTube Shorts, TikTok, Instagram Reels, Facebook Reels.
 - Known constraint: Instagram (since April 2026) removes accounts that mainly repost others' content from recommendations, so prefer original gameplay or clips with meaningful added value.
 - Still open: whether the user owns GTA 6 and can record their own gameplay, and whether the content will be in Arabic or English.
+
+## Clipping workflow (tested 2026-11-20)
+- `clipper/` holds a working Twitch-live -> vertical captioned clip pipeline (see `clipper/README.md`).
+- Use the cloud environment `gta6-clipper`; Twitch segment hosts vary per stream and each must be added to its allowed hosts.
+- Set `HF_HUB_DISABLE_XET=1` when downloading the Whisper model; pass audio to faster-whisper as a numpy array.
